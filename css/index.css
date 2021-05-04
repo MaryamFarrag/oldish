@@ -1,0 +1,387 @@
+/* ---- reset ---- */ 
+*{
+    transition: all 1s;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  width:100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.h-60{
+  height:60%;
+}
+/*loadeing screen*/
+.box {
+    position: relative;
+    top: 40%;
+    left:42%;
+    width: 33.33vw;
+    height: 33.33vw;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 180px;
+    min-height: 180px;
+    display: inline-block;
+}
+.spinner{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transform-origin:center;
+    width:120px;
+    height:120px;
+}
+.spinner  span{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:12px;
+}
+.type7{
+    width:20px;
+    height:20px;
+    animation:spinner7_1 1.4s infinite linear forwards;
+}    
+.type7 span{
+    color:transparent;
+}
+.type7 span:before,
+.type7 span:after{
+  content:' ';
+  position:absolute;
+  width:20px;
+  height:20px;
+  background-color:#fff;
+}
+.type7 span:before{
+    top:-20px;
+    left:-20px;
+    background-color: rgba(247, 222, 4);
+    animation:spinner7_2 1.4s infinite linear forwards;
+}
+.type7 span:after{
+    top:20px;
+    left:20px;
+    background-color: rgba(247, 222, 4);
+    animation:spinner7_3 1.4s infinite linear forwards;
+  }
+  @keyframes spinner7_1{
+    0%,
+    100%{
+      background-color:rgb(247, 222, 4);
+    }
+    50%{
+      background-color:rgba(247, 222, 4,.5);
+    }
+  }
+  @keyframes spinner7_2{
+    0%,
+    100%{
+      transform:translate(0, 0) rotateX(0) rotateY(0);
+    }
+    25%{
+      transform:translate(0, calc(100% + 20px)) rotateX(180deg) rotateY(0);
+    }
+    50%{
+      transform:translate(calc(100% + 20px), calc(100% + 20px)) rotateX(180deg) rotateY(180deg);
+    }
+    75%{
+      transform:translate(calc(100% + 20px), 0) rotateX(0deg) rotateY(180deg);
+    }
+  }
+  
+  @keyframes spinner7_3{
+    0%,
+    100%{
+      transform:translate(0, 0) rotateX(0) rotateY(0);
+    }
+    25%{
+      transform:translate(0, calc(-100% - 20px)) rotateX(-180deg) rotateY(0);
+    }
+    50%{
+      transform:translate(calc(-100% - 20px), calc(-100% - 20px)) rotateX(-180deg) rotateY(-180deg);
+    }
+    75%{
+      transform:translate(calc(-100% - 20px), 0) rotateX(0) rotateY(-180deg);
+    }
+  }
+  
+.loading{
+    position: fixed;
+    width:100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(253, 78, 78);
+    z-index: 10000;
+}
+.cssload-my-name{
+    position: absolute;
+    top:40%;
+    width:100%;
+}
+.cssload-my-name p{
+    font-size: 50px;
+    color: rgb(247, 222, 4);
+    font-weight: 700;
+}
+#home{
+    position: relative;
+}
+nav{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    height:80px;
+    padding-top:40px;
+}
+.navbar-brand{
+    color:#356893!important;
+    font-size:30px;
+    font-family:'Segoe UI',sans-serif;
+    font-weight: 700;
+}
+.navbar-brand img{
+  border-radius: 10px;
+  margin-right: 10px;
+  width:50px;
+  height:50px;
+}
+nav .nav-link{
+    color:#000;
+}
+#home{
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0, 0),
+    rgba(0,0,0, 100)
+  ),url(../images/cover.jpg);
+  padding-bottom: 10px;
+  height:80vh;
+}
+#home .caption{
+    color:#f1f1f1;
+    width:100%;
+    margin-top:25%;
+}
+#home .caption h1{
+  color:#f1f1f1;
+  text-shadow: 0 0 10px #f1f1f1;
+}
+#home .caption span{
+  color:#f1f1f1;
+  font-family: 'Butterfly Kids', cursive;
+  font-size:30px;
+  font-weight: 600;
+}
+#home .caption p, #about p{
+  color: #f1f1f1;
+}
+#home .caption .my-btn{
+  color:#f1f1f1;
+  background-color: #356893;
+}
+#home img ,#about img{
+  border-radius:10px;
+}
+/*start of the about section*/
+#about{
+    position: relative;
+}
+#about img{
+  max-height: 400px;
+  width:100%;
+  
+}
+#about span{
+  color:#d11a33;
+  font-family: 'Butterfly Kids', cursive;
+  font-size:50;
+}
+#about h2{
+  color:rgb(63, 63, 63);
+}
+#about p{
+  color:rgb(63, 63, 63);
+}
+#spec{
+    background-color: rgb(222, 154, 38,.2);
+    position: relative;
+}
+#spec img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+}
+#spec h2{
+  font-family: 'Butterfly Kids', cursive;
+  font-size:50px;
+  color:rgb(24, 23, 23);
+}
+#spec h1{
+  color:rgb(63, 63, 63);
+}
+#spec h1:after{
+  content: ' ';
+  position: absolute;
+  background-color: #d11a33;
+  width:30px;
+  height: 30px;
+  margin-left:15px;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  margin-top:10px;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(180deg);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+}
+.owl-carousel .owl-nav button.owl-next{
+  position: absolute;
+  color:#d11a33;
+  right:-70px;
+  top:30%;
+  font-size:80px;
+  padding:0 30px 0 30px!important;
+  margin:10px 10px;
+  border-radius: 40%;
+}
+.owl-carousel .owl-nav button.owl-prev{
+  position: absolute;
+  color:#d11a33;
+  left:-70px;
+  top:30%;
+  font-size:80px;
+  padding:0 30px 0 30px!important;
+  margin:10px 10px;
+  border-radius: 40%;
+}
+.owl-carousel img{
+  object-fit: cover;
+}
+#services{
+  background-color: #482855;
+  color:#f1f1f1;
+}
+#services .service{
+  background-color:#f1f1f1;
+  border-radius:10px;
+  box-shadow: 0px 0px 5px rgb(216, 214, 214);
+}
+#services .service h2{
+  color:#535353;
+}
+#services .service p{
+  color:#706f6f;
+}
+#services .service header i{
+  font-size:50px;
+  color:rgb(247, 222, 4);
+  font-style: normal;
+}
+#contact h1{
+  color:rgb(70, 70, 70);
+  margin-bottom: 20px;
+}
+#contact .my-info{
+  background-color:rgba(253, 78, 78,.4);
+  height:100%;
+  border-radius: 10px;
+}
+#contact .my-btn{
+  border:rgb(247, 222, 4) 1px solid;
+  background-color: rgb(247, 222, 4);
+  color:rgb(70, 70, 70);
+}
+#contact .my-btn:hover{
+  border:rgb(253, 78, 78) 1px solid;
+  background-color: rgb(253, 78, 78);
+  color:rgb(216, 214, 214);
+}
+footer{
+  background-color: #482855;
+}
+footer .col-md-4{
+  border-right:1px solid rgba(255, 255, 255, 0.3);
+}
+footer header{
+  color:#fff;
+  margin:0;
+}
+footer .slogan .h{
+  font-size: 40px;
+  margin:0;
+}
+footer .about a{
+  color:rgb(240,240,240);
+  display: block;
+  text-decoration: none;
+}
+footer .contact-us{
+  color:#fff;
+}
+footer .contact-us .h{
+  font-size:22px;
+}
+footer .contact-us .icons p{
+  font-size:14px;
+  color:rgb(240,240,240);
+}
+footer .contact-us .icons a{
+  color:rgb(240, 240, 240);
+}
+footer .end{
+  background-color: #390f49;
+}
+footer .end p{
+  font-size:12px;
+  color: rgb(190, 190, 190);
+}
+footer .end span{
+  color:#fff;
+  font-style: normal;
+}
+footer .footer-link{
+  color:rgb(190, 190, 190);
+  font-size:14px;
+}
+footer .row{
+  padding-right:0!important;
+  margin:0!important;
+}
+@media only screen and (max-width:450px){
+  .spinner{
+    top:100%;
+    left:20%;
+}
+.navbar-brand{
+  font-size:20px;
+  font-weight: 700;
+}
+.cssload-my-name p{
+  font-size: 30px;
+  color: rgb(247, 222, 4);
+  font-weight: 700;
+}
+.box {
+  position: relative;
+  top: 25%;
+  left:42%;
+  width: 33.33vw;
+  height: 33.33vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 180px;
+  min-height: 180px;
+  display: inline-block;
+}
+}
